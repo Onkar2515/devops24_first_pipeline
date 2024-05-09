@@ -1,0 +1,13 @@
+pipeline{
+  agent any
+  stages
+  { stage('my first job to print')
+   {steps{sh 'echo hello_Jenkins'}}
+
+    stage('building the job')
+   {steps{sh 'echo code_is_building'}}
+
+    stage('deploy artifact')
+   {steps{sh 'echo code_is_deploying'}}
+  }
+}
